@@ -30,6 +30,7 @@ function Location(){
 	
 	function onError(err) {
 		window.localStorage.removeItem('mainList');
+		alert('Foutje in location.js: ' + err);
 		callback(err, null);
 	}
 	
