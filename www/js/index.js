@@ -41,7 +41,6 @@ var app = {
             main.initialize();
 
             $(document.body).on('tap', '#mainList li a', function(){
-                navigator.vibrate(500);
                 var detail = new Detail();
                 detail.initialize($(this));
                 $.mobile.changePage('#detail', { transition: 'slideup' });

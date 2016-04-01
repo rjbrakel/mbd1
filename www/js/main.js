@@ -24,6 +24,7 @@ function Main () {
 
     		if(rainAlert != null && parseFloat(rainAlert) > 0)
     		{
+    			navigator.vibrate(300);
     			navigator.notification.alert(
 			    	'Het gaat binnen 3 uur ' + rainAlert + 'mm regenen op uw locatie!',  // message
 			    	function(){},         // callback
@@ -32,6 +33,7 @@ function Main () {
 				);
     		}
     		else{
+    			navigator.vibrate(300);
     			navigator.notification.alert(
 			    	'Het gaat binnen 3 uur niet regenen op uw locatie!',  // message
 			    	function(){},         // callback
