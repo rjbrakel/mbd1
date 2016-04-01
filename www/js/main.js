@@ -31,6 +31,14 @@ function Main () {
 			    	'Ik pak mijn paraplu vast!'                  // buttonName
 				);
     		}
+    		else{
+    			navigator.notification.alert(
+			    	'Het gaat binnen 3 uur niet regenen op uw locatie!',  // message
+			    	function(){},         // callback
+			   		'Buitenspeeltijd!',            // title
+			    	'Ik ga lekker naar buiten!'                  // buttonName
+				);
+    		}
     		
 
     		if (err) {
