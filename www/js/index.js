@@ -1,6 +1,6 @@
 var baseUrl = 'http://api.openweathermap.org/data/2.5';
 var locationList = '2747351,2750053,5128638,2759794,524901';
-var sessionExpirationTime = 5;
+var sessionExpirationTime = 3600;
 
 var varUrl = function(){
     return '&units=' + window.localStorage.getItem('unit') +'&lang=nl&APPID=f82bc7a0785cb8749616049189df1757';
