@@ -62,8 +62,6 @@ function Main () {
 
 	this.getLocations = function(){
 
-		alert(baseUrl + '/group?id=' + locationList + '' + varUrl());
-
 		$.getJSON(baseUrl + '/group?id=' + locationList + '' + varUrl())
 	    	.done(function(json){
 	    		var items = [];
