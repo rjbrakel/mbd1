@@ -28,6 +28,7 @@ body {
     margin:0; 
     padding:0;
      margin-bottom: 10px;
+     position: relative;
 }
 
 #mainList li a{
@@ -39,11 +40,6 @@ body {
     border-radius: 5px;
 }
 
-#mainList li.location {
-    background: url('../img/location.png') no-repeat right 20px center;
-    background-size: 15px auto;
-}
-
 #mainList li.location a{
     padding: 15px 60px 15px 20px;
 }
@@ -53,12 +49,46 @@ body {
     text-decoration: none;
     line-height: 40px;
     border: 1px #ccc solid;
-    background: url('../img/location.png') no-repeat left 20px center;
-    background-size: 15px auto;
     text-indent: 55px;
     background-color: #eee;
     border-radius: 5px;
+    position: relative;
 }
+
+#mapsLink:after, #externLink:after, #mainList li.location:after {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: url('../img/sprites.png') no-repeat left center;
+    background-size:  auto 15px;
+    top: 50%;
+    left: 20px;
+    margin-top: -7px;
+}
+
+#mainList li.location:after{
+    right: 20px;
+    left: auto;
+}
+
+#externLink:after  {
+    background-position: right center;
+    width: 17px;
+}
+
+#externLink {
+    display: block;
+    text-decoration: none;
+    line-height: 40px;
+    border: 1px #ccc solid;
+    text-indent: 55px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+}
+
 
 #contentTable { 
     margin-top: 20px;
