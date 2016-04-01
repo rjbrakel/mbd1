@@ -9,7 +9,7 @@ function Detail(){
 		$.getJSON(baseUrl + '/forecast?id=' + cityid + '' + varUrl())
 			.done(function(json){
 				$('#detail .ui-title').text(json.city.name);
-				$('#mapsLink').attr('href', 'maps://?q=' + json.city.coord.lat + ',' + json.city.coord.lon);
+				$('#mapsLink').attr('href', 'geo:' + json.city.coord.lat + ',' + json.city.coord.lon);
 
 				$('#contentTable').html('');
 				$('#contentTable').append('<tr> <td colspan="2"><b>Huidig weer - ' + json.city.name + '</b></td></tr>');
