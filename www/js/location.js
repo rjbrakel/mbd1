@@ -33,11 +33,12 @@ function Location(){
 	function onError(err) {
 		window.localStorage.removeItem('mainList');
 		alert('Foutje in location.js: ' + err);
-		callback(err, null);
+		callback(err, null, 0);
 	}
 	
 	this.get = function(cb){
 		callback = cb;
-		navigator.geolocation.getCurrentPosition(onSuccess, onError);
+		var options = { enableHighAccuracy: true };
+		navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
 	}
 }
