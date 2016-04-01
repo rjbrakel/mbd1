@@ -1,0 +1,102 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;              
+    -webkit-text-size-adjust: none;      
+    -webkit-user-select: none;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+#mainList {
+    margin-top: 20px;
+    box-shadow: none;
+    margin:0;
+    padding:0;
+}
+
+#mainList li {
+    list-style-type:none;
+    margin:0; 
+    padding:0;
+     margin-bottom: 10px;
+}
+
+#mainList li a{
+    display: block;
+    line-height: 130%;
+    box-sizing: border-box;
+    padding: 15px 20px 15px 20px;
+    border: 1px #ccc solid;
+    border-radius: 5px;
+}
+
+#mainList li.location {
+    background: url('../img/location.png') no-repeat right 20px center;
+    background-size: 15px auto;
+}
+
+#mainList li.location a{
+    padding: 15px 60px 15px 20px;
+}
+
+#mapsLink {
+    display: block;
+    text-decoration: none;
+    line-height: 40px;
+    border: 1px #ccc solid;
+    background: url('../img/location.png') no-repeat left 20px center;
+    background-size: 15px auto;
+    text-indent: 55px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+#contentTable { 
+    margin-top: 20px;
+    width: 100%;
+}
+
+#contentTable tr.marginBottom td{
+    padding-bottom: 10px;
+}
+
+#forecastTable {
+    margin-top:  15px;
+}
+
+#forecastTable b {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.forecastItem { 
+    float: left; 
+    width: 50%;
+    margin-bottom: 10px;
+    border-bottom: 1px #ccc solid;
+     padding-bottom: 10px;
+}
+
+.forecastItem .date{
+    font-weight: bold;
+}
+.forecastItem span{ 
+    display: block;
+}
+
+@media(min-width: 768px){
+    #home.ui-page-active { width: 100%; display: block !important; }
+    #home { width: 40%; display: block !important; z-index: 888;}
+    #detail { width: 60%; display: block !important; left: 40% !important;}
+    #settings { z-index: 999;}
+    #detail .ui-header .ui-btn-left { display: none !important;}
+}

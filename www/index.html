@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+        <title>Eindopdracht MD1 Rob &amp; Robin</title>
+    </head>
+    <body>
+
+        <!-- Home page -->
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <a data-icon="gear" class="ui-btn-left" href="#settings" data-transition="slideup">Instellingen</a>
+                <span class="ui-title">Weer app</span>
+            </div>
+
+            <div data-role="content">   
+                <ul id="mainList">
+                    
+                </ul> 
+            </div>
+        </div>
+
+        <!-- Detail Page -->
+        <div data-role="page" id="detail">
+            <div data-role="header">
+                <a data-icon="arrow-l" class="ui-btn-left" href="#home" data-transition="slideup">Terug</a>
+                <span class="ui-title">Weer app</span>
+            </div>
+
+            <div data-role="content">
+                <a id="mapsLink">Bekijk locatie op kaart</a>
+
+                <table id="contentTable">     
+                </table>               
+
+                <div id="forecastTable">
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings page -->
+        <div data-role="page" id="settings">
+            <div data-role="header">
+                <span class="ui-title">Instellingen</span>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <form>
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Kies eenheid:</legend>
+                        <label for="imperial">&deg;F</label>
+                        <input type="radio" name="unit" id="imperial" value="imperial" class="radioUnit">
+                        <label for="metric">&deg;C</label>
+                        <input type="radio" name="unit" id="metric" value="metric" class="radioUnit">   
+                    </fieldset>
+                </form>
+
+                <a data-role="button" data-icon="delete" id="close" data-transition="slideup">Sluiten</a>
+            </div>
+        </div>
+        <script src="jquery.js"></script>
+        <script src="jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/detail.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="js/location.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+      
+        <script type="text/javascript">
+            $.support.cors=true;
+            app.initialize();
+        </script>
+    </body>
+</html>
