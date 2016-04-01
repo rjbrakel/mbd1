@@ -22,15 +22,15 @@ function Main () {
 		var location = new Location();
     	location.get(function(err, data, rainAlert) {
 
-    // 		if(rainAlert != null && parseFloat(rainAlert) > 0)
-    // 		{
-    // 			navigator.notification.alert(
-			 //    	'Het gaat binnen 3 uur ' + rainAlert + 'mm regenen op uw locatie!',  // message
-			 //    	function(){},         // callback
-			 //   		'Let op! Regen onderweg!',            // title
-			 //    	'Ik pak mijn paraplu vast!'                  // buttonName
-				// );
-    // 		}
+    		if(rainAlert != null && parseFloat(rainAlert) > 0)
+    		{
+    			navigator.notification.alert(
+			    	'Het gaat binnen 3 uur ' + rainAlert + 'mm regenen op uw locatie!',  // message
+			    	function(){},         // callback
+			   		'Let op! Regen onderweg!',            // title
+			    	'Ik pak mijn paraplu vast!'                  // buttonName
+				);
+    		}
     		
 
     		if (err) {

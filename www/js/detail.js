@@ -17,7 +17,7 @@ function Detail(){
 				$('#contentTable').append('<tr> <td>Min. Temp.</td> <td>' + Math.round(json.list[0].main.temp_min) + ' ' + getUnit() + '</td></tr>');
 				$('#contentTable').append('<tr> <td>Max. Temp.</td> <td>' + Math.round(json.list[0].main.temp_max) + ' ' + getUnit() + '</td></tr>');
 				$('#contentTable').append('<tr class="marginBottom"> <td>Omschrijving</td> <td>' + json.list[0].weather[0].description + '</td></tr>');
-				if(json.list[0].rain != null	){
+				if(json.list[0].rain != null && json.list[0].rain['3h'] != null && json.list[0].rain != undefined && json.list[0].rain['3h'] != undefined){
 					$('#contentTable').append('<tr> <td>Regen (3h)</td> <td>' + json.list[0].rain["3h"] + ' mm</td></tr>');
 				}
 				else{
